@@ -1,0 +1,149 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  height: 100%;
+
+  &-title {
+    font-size: 26px;
+    text-align: center;
+    line-height: 30.5px;
+  }
+
+  &-phone {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37.5px;
+    background-color: transparent;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+    overflow: 1px solid blue;
+  }
+
+  &-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    color: transparent;
+
+  }
+
+  &-number {
+    display: inline-block;
+    width: 17px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37.5px;
+    background-color: transparent;
+    font-family: 'Roboto';
+    text-align: center;
+  }
+
+  &-text {
+    margin: 0 -30px;
+    text-align: center;
+    line-height: 16.5px;
+  }
+
+  &-consent {
+    padding: 0 0 0 18px;
+    text-align: left;
+    color: #565656;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &-btn {
+      position: relative;
+      flex: 0 0 40px;
+      height: 40px;
+      border: 2px solid black;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &_active::after {
+        content: '';
+        width: 24px;
+        height: 18.5px;
+        background-image: url(../../assets/img/form/check.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &-submit {
+    width: 100%;
+    color: #4E4E4E;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid #4E4E4E;
+    padding: 12px 0;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      background-color: black;
+      color: #fff;
+    }
+
+    &:disabled {
+      &:hover, &:focus {
+        color: #4E4E4E;
+        background-color: transparent;
+        cursor: auto;
+      }
+    }
+  }
+
+  &-enterNumbers {
+    padding: 20px 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  &-enterNumber {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18.5px;
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    &:hover, &:focus {
+      background-color: black;
+      color: #fff;
+    }
+
+    &_big {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  &-error {
+    color: #EA0000;
+  }
+
+  &-errormsg {
+    width: 100%;
+    color: #EA0000;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.5px;
+  }
+}

@@ -1,0 +1,47 @@
+.PromoVideo {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+}
+
+.Banner {
+  position: absolute;
+  bottom: 143px;
+  right: 0;
+  max-width: 251px;
+  padding: 20px 10px 10px;
+  background-color: #86D3F4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+
+  &-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.5px;
+  }
+
+  &-text {
+    max-width: 126px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.5px;
+  }
+
+  &-qr {
+    width: 126px;
+    height: 126px;
+  }
+
+  &-btn {
+    align-self: center;
+    padding: 16.5px 67px;
+    color: #86D3F4;
+    background-color: #000;
+    cursor: pointer;
+  }
+}
